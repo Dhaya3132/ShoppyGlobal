@@ -4,7 +4,7 @@ import { useFetch } from '../utils/useFetch';
 const ProductDetail = () => {
     const {id} = useParams();
     const productId = parseInt(id, 10);
-    const {productData} = useFetch(`https://dummyjson.com/products/${productId}`)
+    const {productData} = useFetch(`https://dummyjson.com/products/${productId}`, false)
     console.log(productData);
     return (
         <div>

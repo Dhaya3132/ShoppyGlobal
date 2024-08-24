@@ -17,4 +17,4 @@ const NewArrival = () => {
     )
 }
 
-export default NewArrival
+export default NewArrival;

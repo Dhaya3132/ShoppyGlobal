@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-export const useFetch = (url) => {
-    const [productData, setProductData] = useState([]);
+export const useFetch = (url, isList=true) => {
+    const [productData, setProductData] = useState(isList ? [] : null);
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(true);
 
@@ -9,7 +9,7 @@ export const useFetch = (url) => {
             try{
                 const response = await fetch(url);
                 const responseData = await response.json();
-                setProductData(responseData.products);
+                setProductData(isList ? responseData.products : responseData);
             }
             catch(error){
                 setError(error.message)
