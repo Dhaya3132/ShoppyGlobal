@@ -1,15 +1,17 @@
 import { useState, useEffect } from "react";
-export const useFetch = (url, isList=true) => {
-    const [productData, setProductData] = useState(isList ? [] : null);
+export const useFetch = (url, isList = true) => {
+    const [productData, setProductData] = useState([]);
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(true);
+    
 
     useEffect(()=>{
         const fetchProducts = async() => {
             try{
                 const response = await fetch(url);
                 const responseData = await response.json();
-                setProductData(isList ? responseData.products : responseData);
+                console.log(responseData)
+                setProductData(responseData);
             }
             catch(error){
                 setError(error.message)
@@ -19,7 +21,7 @@ export const useFetch = (url, isList=true) => {
             }
         }
         fetchProducts();
-    },[url])
+    },[url,isList])
 
     return {productData, error, loading}
 }
