@@ -9,6 +9,7 @@ export default {
       colors:{
         'Vermillion':'#E34234',
         'WhiteSmoke':'#F5F5F5',
+        'mintCream':'#F5FFFA',
       },
       fontFamily:{
         'Poppins':['Poppins'],
