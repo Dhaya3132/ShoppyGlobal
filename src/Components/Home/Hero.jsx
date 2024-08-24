@@ -14,7 +14,7 @@ const Hero = () => {
                         <li><h3 className="font-bold md:text-3xl text-xl">100+</h3><p className="font-light text-medium md:text-lg text-base">international brands</p></li>
                     </ul>
                 </div>
-                <div className='md:w-1/4 md:h-1/4 w-full h-full' id='rightPart'>
+                <div className='md:w-1/4 md:h-1/4 w-80 h-80 flex shrink-0 mt-5' id='rightPart'>
                     <img src={hero_icon} alt="hero_icon" className='w-full h-full' />
                 </div>
             </div>
