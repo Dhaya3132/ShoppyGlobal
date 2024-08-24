@@ -7,7 +7,7 @@ const TopSelling = () => {
     return (
         <div className='p-5 mt-5 flex flex-col justify-center'>
             <h2 className='font-semibold text-3xl text-center mb-10'>Top Selling</h2>
-            <div className='flex justify-center gap-4 items-center'>
+            <div className='flex flex-wrap justify-center gap-4 items-center'>
                 {
                     filterProduct.map((product) => (
                         <ProductItem product={product} key={product.id} />

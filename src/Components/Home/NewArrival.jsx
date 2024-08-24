@@ -6,7 +6,7 @@ const NewArrival = () => {
     return (
         <div className='pb-8 '>
             <h2 className='font-semibold text-3xl text-center mb-10'>New Arrivals</h2>
-            <div className='flex justify-center gap-4 items-center'>
+            <div className='flex flex-wrap justify-center gap-4 items-center'>
                 {
                     filterProduct.map((product) => (
                         <ProductItem product={product} key={product.id} />
