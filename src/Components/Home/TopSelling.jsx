@@ -3,7 +3,9 @@ import ProductItem from '../ProductItem';
 
 const TopSelling = () => {
     const { productData } = useFetch('https://dummyjson.com/products');
-    const filterProduct = productData.length >= 20 ? productData.slice(10, 15) : productData;
+    const products = productData && productData.products ? productData.products : [];
+    const filterProduct = products.length >= 5 ? products.slice(0, 5) : products;
+   
     return (
         <div className='p-5 mt-5 flex flex-col justify-center'>
             <h2 className='font-semibold text-3xl text-center mb-10'>Top Selling</h2>
