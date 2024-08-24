@@ -2,7 +2,9 @@ import { useFetch } from '../../utils/useFetch';
 import ProductItem from '../ProductItem';
 const NewArrival = () => {
     const { productData } = useFetch('https://dummyjson.com/products');
-    const filterProduct = productData.length >= 5 ? productData.slice(0, 5) : productData;
+    const products = productData && productData.products ? productData.products : [];
+    const filterProduct = products.length >= 5 ? products.slice(0, 5) : products;
+
     return (
         <div className='pb-8 '>
             <h2 className='font-semibold text-3xl text-center mb-10'>New Arrivals</h2>
