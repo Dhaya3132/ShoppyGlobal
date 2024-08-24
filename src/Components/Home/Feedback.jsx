@@ -1,6 +1,7 @@
 import { useFetch } from "../../utils/useFetch";
 import star_icon from '../../assets/star_icon.svg';
 import {nanoid} from 'nanoid';
+
 const Feedback = () => {
     const { productData } = useFetch('https://dummyjson.com/products');
     const products = productData && productData.products ? productData.products : [];
@@ -23,7 +24,6 @@ const Feedback = () => {
                                             <h2 className="font-semibold text-lg text-amber-500">{reviews.reviewerName}</h2>
                                             <p className="font-semibold text-2xl">{reviews.comment}</p>
                                         </div>
-
                                     </li>
                                 ))
                         ))
