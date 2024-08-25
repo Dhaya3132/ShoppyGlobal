@@ -11,7 +11,7 @@ const Header = () => {
         <ul className='flex gap-6 items-center font-normal text-base'>
             <Link><li>Home</li></Link>
             <Link to="/products"><li className='flex items-center gap-1'>Products <img src={product_icon} alt="producticon" className='w-5 h-5' /></li></Link>
-            <li className='flex items-center gap-1'>Cart<img src={cart_icon} alt="cart_icnon" className='w-5 h-5' /></li>
+            <Link to='/cartproduct'><li className='flex items-center gap-1'>Cart<img src={cart_icon} alt="cart_icnon" className='w-5 h-5' /></li></Link>
             <li><img src={profile_icon} alt="profile_icon" className='w-8 h-8 ml-4'/></li>
         </ul>
     </nav>
