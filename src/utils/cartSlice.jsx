@@ -12,9 +12,12 @@ const cartSlice = createSlice({
             console.log(action.payload)
             state.cartItem.push(action.payload)
             console.log([...state.cartItem]);
+        },
+        removeCart: (state,action) => {
+            state.cartItem.filter(product => product.id !== action.payload)
         }
     }
 })
 
-export const {addCart} = cartSlice.actions;
+export const {addCart,removeCart} = cartSlice.actions;
 export default cartSlice.reducer;
