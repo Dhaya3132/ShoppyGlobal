@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { addCart,removeCart } from "../utils/cartSlice";
+import { addCart, removeCart } from "../utils/cartSlice";
 import { useSelector } from "react-redux";
 const ProductItem = ({ product }) => {
 
@@ -12,19 +12,16 @@ const ProductItem = ({ product }) => {
         console.log('clicked')
         dispatch(addCart(product))
     }
-    
+
     return (
-        <div className='bg-transparent md:w-60 md:p-4 w-full p-5 md:hover:scale-105'>
+        <div className='bg-transparent md:w-60 w-full md:hover:scale-105'>
             <Link to={`/products/${product.id}`}>
                 <div>
-                    <div className='bg-sky-50 border-2 border-sky-200 flex justify-center'><img src={product.images} alt="product_image" className="w-56 h-56" /></div>
-                    <p className='font-semibold text-2xl mt-2'>${product.price}</p>
-                    <h2 className='font-medium text-lg'>{product.title.length >= 12 ? product.title.slice(0, 10) + '...' : product.title}</h2>
+                    <div className='bg-gray-50 flex justify-center'><img src={product.images} alt="product_image" className="w-56 h-56" /></div>
+                    <h2 className='font-semibold text-lg mt-1'>{product.title.length >= 12 ? product.title.slice(0, 15) + '...' : product.title}</h2>
+                    <p className='font-semibold text-base mt-1 text-Vermillion'>${product.price}</p>
                 </div>
             </Link>
-            {isCart ? 
-            <button className='font-medium text-base w-full py-2 px-2 mt-2 cursor-pointer bg-black text-white'>Go to Cart</button> 
-            : <button className='font-medium text-base w-full py-2 px-2 mt-2 cursor-pointer bg-black text-white' onClick={handleCart}>Add to Cart</button> }
         </div>
     )
 }

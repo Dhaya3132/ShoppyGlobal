@@ -12,7 +12,7 @@ const Feedback = () => {
             <div className="overflow-hidden whitespace-nowrap mt-10">
                 <ul className="flex justify-center items-center gap-5 animate-Move">
                     {products.map((product) => ( product.reviews.filter( review => review.rating > 4 ).map((reviews) => (
-                        <li className="rounded-sm p-5 border-2 border-black shadow-lg bg-amber-50" key={nanoid()}>
+                        <li className="rounded-sm p-5 border-2 border-black shadow-lg bg-yellow-50" key={nanoid()}>
                             <div className="flex items-center gap-1 bg-black text-white float-right px-3 py-1 rounded-full">
                                 <img src={star_icon} alt="" className="w-4 h-4" />
                                 <p>{reviews.rating}</p>

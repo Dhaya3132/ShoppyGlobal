@@ -7,7 +7,7 @@ import Footer from '../../Components/Footer';
 
 const Home = () => {
     return (
-        <>
+        <div>
             <HeroSecotion />
             <BrandlogoSection />
             <section className='mt-20'>
@@ -17,7 +17,7 @@ const Home = () => {
             </section>
             <Footer />
 
-        </>
+        </div>
 
     )
 }

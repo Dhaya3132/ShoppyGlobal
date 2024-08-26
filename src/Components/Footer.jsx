@@ -2,7 +2,7 @@ const Footer = () => {
     return (
         <footer className="bg-blackSmoke p-10 border-t-2 border-slate-200">
             <h2 className="text-Vermillion text-lg font-semibold">ShoppyGlobe</h2>
-            <ul className='grid md:grid-cols-4 grid-cols-2 mt-5 text-gray-500'>
+            <ul className='grid md:grid-cols-4 grid-cols-2 gap-5 mt-5 text-gray-500'>
                 <li className='hover:text-black'>Audio Description</li>
                 <li className='hover:text-black'>Help Center</li>
                 <li className='hover:text-black'>Gift Cards</li>
