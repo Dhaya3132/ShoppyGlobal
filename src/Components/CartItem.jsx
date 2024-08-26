@@ -1,8 +1,14 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { removeCart } from '../utils/cartSlice';
 
 
 const CartItem = ({ product }) => {
-  const [quantity, setQuantity] = useState(1)
+  const [quantity, setQuantity] = useState(1);
+  const dispatch = useDispatch();
+  const handleRemove = () => {
+    dispatch(removeCart(product.id))
+  }
   return (
       <div id='leftPart' className='bg-white border-b-2 border-gray-500 p-5 flex gap-4'>
         <div className='md:w-48 md:h-48 w-32 h-32'>
@@ -20,7 +26,7 @@ const CartItem = ({ product }) => {
             </div>
           </div>
           <div className='mt-10 flex gap-5'>
-            <button className='md:px-6 md:py-1.5 px-3 py-1 bg-black text-white text-sm md:text-base font-medium'>Remove item</button>
+            <button className='md:px-6 md:py-1.5 px-3 py-1 bg-black text-white text-sm md:text-base font-medium' onClick={handleRemove}>Remove item</button>
             <button className='md:px-6 md:py-1.5 px-3 py-1 text-black font-medium border-2 text-sm md:text-base border-black'>Save later</button>
           </div>
         </div>
