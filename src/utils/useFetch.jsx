@@ -10,7 +10,7 @@ export const useFetch = (url, isList = true) => {
             try{
                 const response = await fetch(url);
                 const responseData = await response.json();
-                console.log(responseData)
+                // console.log(responseData)
                 setProductData(responseData);
             }
             catch(error){

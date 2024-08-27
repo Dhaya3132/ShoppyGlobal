@@ -1,30 +1,46 @@
-import {createBrowserRouter} from 'react-router-dom';
+import { createBrowserRouter } from 'react-router-dom';
+import React, { lazy, Suspense } from 'react';
 import App from './App';
 import Home from './Pages/Home/Home';
-import Products from './Pages/Products/Products';
-import ProductDetail from './Components/ProductDetail';
-import Cart from './Components/Cart';
+
+const Products = lazy(() => import('./Pages/Products/Products'));
+const ProductDetail = lazy(() => import('./Components/ProductDetail'));
+const Cart = lazy(() => import('./Components/Cart'));
 
 const router = createBrowserRouter([
     {
-        path:'/',
-        element:<App />,
-        children:[
+        path: '/',
+        element: <App />,
+        children: [
             {
-                path:'/',
-                element:<Home />
+                path: '/',
+                element:
+                    <Suspense>
+                        <Home />
+                    </Suspense>
             },
             {
-                path:'/products',
-                element:<Products />
+                path: '/products',
+                element:
+                    <Suspense fallback={<div>Loading...</div>}>
+                        <Products />
+                    </Suspense>
+
             },
             {
-                path:'/products/:id',
-                element:<ProductDetail />
+                path: '/products/:id',
+                element:
+                    <Suspense fallback={<div>Loading...</div>}>
+                        <ProductDetail />
+                    </Suspense>
             },
             {
-                path:'/cartproduct',
-                element:<Cart />
+                path: '/cartproduct',
+                element:
+                    <Suspense fallback={<div>Loading...</div>}>
+                        <Cart />
+                    </Suspense>
+
             }
         ]
     }

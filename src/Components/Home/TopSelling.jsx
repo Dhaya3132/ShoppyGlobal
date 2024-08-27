@@ -7,7 +7,7 @@ const TopSelling = () => {
     const filterProduct = products.length >= 5 ? products.slice(0, 5) : products;
    
     return (
-        <section className='flex justify-center items-center mt-10'>
+        <section className='flex justify-center items-center mt-10 p-5'>
         <div>
             <div className='flex gap-1'>
                 <div className='bg-Vermillion w-3 h-7'></div>

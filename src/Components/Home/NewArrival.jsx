@@ -7,7 +7,7 @@ const NewArrival = () => {
     const filterProduct = products.length >= 5 ? products.slice(0, 5) : products;
 
     return (
-        <section className='flex justify-center items-center'>
+        <section className='flex justify-center items-center p-4'>
             <div>
                 <div className='flex gap-1'>
                     <div className='bg-Vermillion w-3 h-7'></div>

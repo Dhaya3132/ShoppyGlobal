@@ -24,7 +24,7 @@ const ProductDetail = () => {
 
         <div>
             {popUp && <PopUp />}
-            <div className='w-full md:p-2 flex flex-col md:flex-row md:justify-center justify-center  p-5 gap-5 mt-10'>
+            <div className='w-full md:p-2 flex flex-col md:flex-row md:justify-center justify-center  p-5 gap-5 mt-10 '>
                 <div className='md:w-3/12 w-4/5 flex flex-shrink-0 bg-gray-100 rounded-sm p-5'>
                     <img src={productData.images} alt="product_image" className='w-full h-full object-contain' />
                 </div>

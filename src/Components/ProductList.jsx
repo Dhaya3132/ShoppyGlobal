@@ -1,13 +1,14 @@
 import { useFetch } from '../utils/useFetch';
 import ProductItem from './ProductItem';
 
-const ProductList = () => {
+const ProductList = ({searchText}) => {
   const { productData } = useFetch('https://dummyjson.com/products');
   const products = productData && productData.products ? productData.products : [];
+  const filterdProduct = products.filter((product) => product.title.toLowerCase().includes(searchText.toLowerCase()));
   return (
     <div className='flex flex-wrap justify-center items-center gap-4 w-4/5 mx-auto'>
       {
-        products.map((product) => (
+        filterdProduct.map((product) => (
           <ProductItem product={product} key={product.id} />
         ))
       }
