@@ -17,8 +17,8 @@ const CartItem = ({ product, removeItem }) => {
   }
 
   return (
-    <div id='leftPart' className='bg-white border-b-2 border-gray-500 p-5 flex gap-4'>
-      <div className='md:w-48 md:h-48 w-32 h-32'>
+    <div id='leftPart' className='bg-white border-b-2 border-gray-500 p-5 flex md:flex-row flex-col  gap-4'>
+      <div className='md:w-48 md:h-48 w-fit h-fit'>
         <img src={product.images} alt="product_image" className='w-full h-full bg-indigo-100 p-1' />
       </div>
       <div>

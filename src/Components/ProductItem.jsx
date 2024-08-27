@@ -1,18 +1,6 @@
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { addCart, removeCart } from "../utils/cartSlice";
-import { useSelector } from "react-redux";
+
 const ProductItem = ({ product }) => {
-
-    const cartItem = useSelector(state => state.cart.cartItem);
-    const isCart = cartItem.some((item) => item.id === product.id);
-
-    const dispatch = useDispatch();
-    const handleCart = () => {
-        console.log('clicked')
-        dispatch(addCart(product))
-    }
-
     return (
         <div className='bg-transparent md:w-60 w-full md:hover:scale-105'>
             <Link to={`/products/${product.id}`}>

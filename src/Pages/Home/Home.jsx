@@ -7,7 +7,7 @@ import Footer from '../../Components/Footer';
 
 const Home = () => {
     return (
-        <div>
+        <div id='homePage'>
             <HeroSecotion />
             <BrandlogoSection />
             <section className='mt-20'>
@@ -16,9 +16,7 @@ const Home = () => {
                 <FeedbackSection />
             </section>
             <Footer />
-
         </div>
-
     )
 }
 export default Home;

@@ -3,7 +3,7 @@ import React, { lazy, Suspense } from 'react';
 import App from './App';
 import Home from './Pages/Home/Home';
 
-const Products = lazy(() => import('./Pages/Products/Products'));
+const Products = lazy(() => import('./Pages/ProductPage/Products'));
 const ProductDetail = lazy(() => import('./Components/ProductDetail'));
 const Cart = lazy(() => import('./Components/Cart'));
 

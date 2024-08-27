@@ -1,27 +1,25 @@
 import { useParams } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { useState } from 'react';
+
 import { useFetch } from '../utils/useFetch';
-import { useDispatch } from 'react-redux'
 import { addCart } from '../utils/cartSlice'
 import ProductReview from './ProductReview';
 import PopUp from './PopUp';
-import { useState } from 'react';
 
 const ProductDetail = () => {
-    const [popUp, setPopup] = useState(false)
+    
     const { id } = useParams();
     const productId = parseInt(id, 10);
+    const [popUp, setPopup] = useState(false);
     const { productData } = useFetch(`https://dummyjson.com/products/${productId}`);
     const dispatch = useDispatch();
     const handleAddCart = () => {
         dispatch(addCart(productData));
         setPopup(true);
-        setTimeout(() => {
-            setPopup(false)
-        }, 2000)
+        setTimeout(() => { setPopup(false)}, 2000)
     }
-
     return (
-
         <div>
             {popUp && <PopUp />}
             <div className='w-full md:p-2 flex flex-col md:flex-row md:justify-center justify-center  p-5 gap-5 mt-10 '>
@@ -36,7 +34,7 @@ const ProductDetail = () => {
                         <p className='bg-green-100 border-2 border-green-200 text-xs font-base px-3 py-1 rounded-full'>Off {productData.discountPercentage}%</p>
                     </div>
                     <div className='flex items-center gap-5 mt-4'>
-                        <button className='px-6 py-1.5 text-white font-medium bg-black' onClick={handleAddCart}>Add to cart</button>
+                        <button className='px-6 py-1.5 text-white font-medium bg-Blue' onClick={handleAddCart}>Add to cart</button>
                         <button className='px-6 py-1.5 text-black font-medium border-2 border-black'>Wishlist</button>
                     </div>
                     <div className='w-fit mt-5'>
