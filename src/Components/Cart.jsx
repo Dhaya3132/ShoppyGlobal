@@ -3,6 +3,7 @@ import CartItem from './CartItem';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { removeCart } from '../utils/cartSlice';
+
 const Cart = () => {
   const [total, setTotal] = useState();
   const cartItem = useSelector(state => state.cart.cartItem);
@@ -11,11 +12,12 @@ const Cart = () => {
   useEffect(() => {
     setTotal(cartItem.reduce((acc, cum) => acc + parseInt(cum.price), 0))
   }, [])
-  
+
   console.log(cartItem)
   const removeProduct = (id) => {
     disptach(removeCart(id))
   }
+  
   return (
     <>
       {cartItem.length > 0 ? <div className='bg-white w-full p-5 flex md:flex-row flex-col justify-center gap-4'>
@@ -34,11 +36,11 @@ const Cart = () => {
             <li className='font-bast text-medium'>Tax : $ 3</li>
             <li className='font-bast text-medium'>Total Amount : ${total + 3} </li>
           </ul>
-          <button className='w-full bg-black text-white font-normal py-2 px-4 mt-4'>Checkout</button>
+          <button className='w-full bg-Blue text-white font-normal py-2 px-4 mt-4'>Checkout</button>
         </div>}
       </div> : <p className='font-normal text-lg text-black text-center mt-5'>Your cart is empty</p>}
     </>
   )
 }
 
-export default Cart
+export default Cart;

@@ -10,6 +10,7 @@ export default {
         'Vermillion':'#E34234',
         'WhiteSmoke':'#F5F5F5',
         'mintCream':'#F5FFFA',
+        'Blue':'#265bff'
       },
       fontFamily:{
         'Poppins':['Poppins'],

@@ -1,10 +1,21 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useDispatch } from 'react-redux';
+import { updateQuantity } from '../utils/cartSlice';
 
 const CartItem = ({ product, removeItem }) => {
-  const [quantity, setQuantity] = useState(1);
+  const dispatch = useDispatch();
   const handleRemove = () => {
     removeItem(product.id);
   }
+  const increaseQunatity = () => {
+    dispatch(updateQuantity({ id: product.id, quantity: product.quantity + 1 }));
+  }
+  const decreaseQuantity = () => {
+    if (product.quantity > 1) {
+      dispatch(updateQuantity({ id: product.id, quantity: product.quantity - 1 }));
+    }
+  }
+
   return (
     <div id='leftPart' className='bg-white border-b-2 border-gray-500 p-5 flex gap-4'>
       <div className='md:w-48 md:h-48 w-32 h-32'>
@@ -16,9 +27,9 @@ const CartItem = ({ product, removeItem }) => {
         <div className='mt-2 flex gap-4 items-center'>
           <p className='text-lg font-base'>Quantity</p>
           <div className='flex gap-2 items-center mt-2'>
-            <button className='bg-black px-3 py-1 text-white' onClick={() => setQuantity(quantity + 1)}>+</button>
-            <p>{quantity}</p>
-            <button className='bg-black  px-3 py-1 p-1 text-white' onClick={() => setQuantity(quantity - 1)}>-</button>
+            <button className='bg-black px-3 py-1 text-white' onClick={increaseQunatity}>+</button>
+            <p>{product.quantity}</p>
+            <button className='bg-black  px-3 py-1 p-1 text-white' onClick={decreaseQuantity}>-</button>
           </div>
         </div>
         <div className='mt-10 flex gap-5'>
@@ -30,4 +41,4 @@ const CartItem = ({ product, removeItem }) => {
   )
 }
 
-export default CartItem
+export default CartItem;
