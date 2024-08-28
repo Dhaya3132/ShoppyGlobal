@@ -2,7 +2,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import React, { lazy, Suspense } from 'react';
 import App from './App';
 import Home from './Pages/Home/Home';
-
+import Error from './Components/Error';
 
 const Products = lazy(() => import('./Pages/ProductPage/Products'));
 const ProductDetail = lazy(() => import('./Components/ProductDetail'));
@@ -45,14 +45,15 @@ const router = createBrowserRouter([
 
             },
         ],
+        errorElement:<Error />,
     },
     {
         path: '/checkout',
         element:
             <Suspense fallback={<div>Loading...</div>}>
                 <Checkout />
-            </Suspense>
-
+            </Suspense>,
+        errorElement:<Error />
     }
 ])
 

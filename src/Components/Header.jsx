@@ -13,7 +13,7 @@ const Header = () => {
   }
   return (
     <nav>
-      <div className='p-5 flex justify-between items-center border-2 border-slate-200'>
+      <div className='p-4 flex justify-between items-center border-2 border-slate-200'>
         <h2 className='font-semibold text-lg '>ShoppyGlobe</h2>
         <ul className='hidden md:flex gap-6 items-center font-normal text-base'>
           <Link><li>Home</li></Link>

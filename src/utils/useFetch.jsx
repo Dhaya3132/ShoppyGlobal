@@ -4,7 +4,6 @@ export const useFetch = (url, isList = true) => {
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(true);
     
-
     useEffect(()=>{
         const fetchProducts = async() => {
             try{
