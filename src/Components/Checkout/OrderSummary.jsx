@@ -5,7 +5,7 @@ const OrderSummary = () => {
     const [total, setTotal] = useState();
     const cartItem = useSelector(state => state.cart.cartItem);
     useEffect(() => {
-        setTotal(cartItem.reduce((acc, cum) => acc + parseInt(cum.price), 0))
+        setTotal(cartItem.reduce((acc, cum) => acc + parseInt(cum.price)*cum.quantity, 0))
     }, [])
     return (
         <div className='md:w-1/2 bg-white p-5 w-full rounded-md shadow-md'>
@@ -34,4 +34,4 @@ const OrderSummary = () => {
     )
 }
 
-export default OrderSummary
+export default OrderSummary;
