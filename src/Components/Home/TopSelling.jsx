@@ -24,3 +24,4 @@ const TopSelling = () => {
 }
 
 export default TopSelling;
+// this component shows the product which are top selling

@@ -64,3 +64,4 @@ const ProductDetail = () => {
     )
 }
 export default ProductDetail;
+// product details

@@ -14,3 +14,4 @@ const ProductItem = ({ product }) => {
     )
 }
 export default ProductItem;
+// product card

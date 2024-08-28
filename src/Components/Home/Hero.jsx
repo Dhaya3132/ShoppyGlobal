@@ -23,4 +23,5 @@ const Hero = () => {
     )
 }
 
-export default Hero
+export default Hero;
+// this is the hero section with welcome message

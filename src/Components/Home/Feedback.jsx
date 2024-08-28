@@ -30,3 +30,5 @@ const Feedback = () => {
     )
 }
 export default Feedback;
+// display the feedback of user which is greater than 4 only.
+// used to custom hooks to fetch the data and get the product review which is greater than 4

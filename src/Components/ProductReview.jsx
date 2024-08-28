@@ -27,3 +27,4 @@ const ProductReview = ({ productData }) => {
 }
 
 export default ProductReview;
+// product review component for particular data

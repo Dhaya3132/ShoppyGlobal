@@ -7,8 +7,7 @@ const PopUp = ({title}) => {
                 <img src={verified_icon} alt="" className='w-5 h-5' />
             </div>
         </div>
-
     )
 }
-
+// shows the popup message when the prodcut has been added to component
 export default PopUp;

@@ -19,3 +19,4 @@ const ProductList = ({ searchText }) => {
 }
 
 export default ProductList;
+// shows all product data

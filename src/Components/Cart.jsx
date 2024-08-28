@@ -40,3 +40,5 @@ const Cart = () => {
 }
 
 export default Cart;
+
+// in left part it shows the item added to the cart in right part shows the order summary

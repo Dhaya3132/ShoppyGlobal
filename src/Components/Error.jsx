@@ -13,3 +13,4 @@ const Error = () => {
     )
 }
 export default Error;
+//error component

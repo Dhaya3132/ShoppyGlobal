@@ -42,3 +42,4 @@ const CartItem = ({ product, removeItem }) => {
 }
 
 export default CartItem;
+// the cart item card

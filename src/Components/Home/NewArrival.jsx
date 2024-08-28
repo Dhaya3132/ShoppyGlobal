@@ -25,3 +25,4 @@ const NewArrival = () => {
 }
 
 export default NewArrival;
+// this component shows the product which are new arrival

@@ -10,3 +10,4 @@ const Brandlogo = () => {
   )
 }
 export default Brandlogo;
+// display the brand logo
