@@ -17,9 +17,9 @@ const CartItem = ({ product, removeItem }) => {
   }
 
   return (
-    <div id='leftPart' className='bg-white border-b-2 border-gray-500 p-5 flex md:flex-row flex-col  gap-4'>
+    <div id='leftPart' className='bg-white border-b-2 border-gray-300 p-5 flex md:flex-row flex-col  gap-4'>
       <div className='md:w-48 md:h-48 w-fit h-fit'>
-        <img src={product.images} alt="product_image" className='w-full h-full bg-indigo-100 p-1' />
+        <img src={product.images} alt="product_image" className='w-full h-full bg-gray-50 rounded-lg p-1 border-2 border-slate-100' />
       </div>
       <div>
         <h2 className='font-medium text-xl'>{product.title}</h2>
@@ -33,8 +33,8 @@ const CartItem = ({ product, removeItem }) => {
           </div>
         </div>
         <div className='mt-10 flex gap-5'>
-          <button className='md:px-6 md:py-1.5 px-3 py-1 bg-black text-white text-sm md:text-base font-medium' onClick={handleRemove}>Remove item</button>
-          <button className='md:px-6 md:py-1.5 px-3 py-1 text-black font-medium border-2 text-sm md:text-base border-black'>Save later</button>
+          <button className='md:px-6 md:py-1.5 px-3 py-1 bg-Vermillion text-white text-sm md:text-base font-normal rounded-sm' onClick={handleRemove}>Remove item</button>
+          <button className='md:px-6 md:py-1.5 px-3 py-1 bg-gray-100 text-black font-medium text-sm md:text-base rounded-sm'>Save later</button>
         </div>
       </div>
     </div>

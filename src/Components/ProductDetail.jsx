@@ -33,9 +33,9 @@ const ProductDetail = () => {
                         <p className='font-semibold text-3xl'>${productData.price}</p>
                         <p className='bg-green-100 border-2 border-green-200 text-xs font-base px-3 py-1 rounded-full'>Off {productData.discountPercentage}%</p>
                     </div>
-                    <div className='flex items-center gap-5 mt-4'>
-                        <button className='px-6 py-1.5 text-white font-medium bg-Blue' onClick={handleAddCart}>Add to cart</button>
-                        <button className='px-6 py-1.5 text-black font-medium border-2 border-black'>Wishlist</button>
+                    <div className='flex items-center gap-2 mt-4'>
+                        <button className='px-6 py-1.5 text-white font-medium bg-Blue rounded-sm' onClick={handleAddCart}>Add to cart</button>
+                        <button className='px-6 py-1.5 text-white bg-amber-500 font-medium rounded-sm'>Wishlist</button>
                     </div>
                     <div className='w-fit mt-5'>
                         <ul className='flex gap-2 items-center'>
@@ -44,7 +44,7 @@ const ProductDetail = () => {
                             <li className='border-2 border-gray-200 p-3 md:text-sm text-xs'>{productData.returnPolicy}</li>
                         </ul>
                     </div>
-                    <section className='bg-gray-100 mt-6 p-5'>
+                    <section className='bg-gray-50 mt-6 p-5'>
                         <h2 className='font-medium text-black text-lg'>Product Information</h2>
                         <ul id="about" className='mt-3'>
                             <li className='text-black text-sm'>Brand : {productData.brand}</li>
