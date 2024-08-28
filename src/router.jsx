@@ -7,7 +7,7 @@ import Home from './Pages/Home/Home';
 const Products = lazy(() => import('./Pages/ProductPage/Products'));
 const ProductDetail = lazy(() => import('./Components/ProductDetail'));
 const Cart = lazy(() => import('./Components/Cart'));
-const Checkout = lazy(() => import('./Components/Checkout'));
+const Checkout = lazy(() => import('./Components/Checkout/Checkout'));
 
 const router = createBrowserRouter([
     {
@@ -48,11 +48,11 @@ const router = createBrowserRouter([
     },
     {
         path: '/checkout',
-        element: 
-        <Suspense fallback={<div>Loading...</div>}>
-            <Checkout />
-        </Suspense>
-        
+        element:
+            <Suspense fallback={<div>Loading...</div>}>
+                <Checkout />
+            </Suspense>
+
     }
 ])
 
