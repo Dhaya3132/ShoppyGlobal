@@ -14,6 +14,7 @@ export default {
       },
       fontFamily:{
         'Poppins':['Poppins'],
+        'Sacramento':['Sacramento']
       },
       backgroundImage:{
         'bgBanner':"url('/public/bg_banner.svg')",

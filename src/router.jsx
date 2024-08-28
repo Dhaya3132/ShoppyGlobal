@@ -3,9 +3,11 @@ import React, { lazy, Suspense } from 'react';
 import App from './App';
 import Home from './Pages/Home/Home';
 
+
 const Products = lazy(() => import('./Pages/ProductPage/Products'));
 const ProductDetail = lazy(() => import('./Components/ProductDetail'));
 const Cart = lazy(() => import('./Components/Cart'));
+const Checkout = lazy(() => import('./Components/Checkout'));
 
 const router = createBrowserRouter([
     {
@@ -41,8 +43,16 @@ const router = createBrowserRouter([
                         <Cart />
                     </Suspense>
 
-            }
-        ]
+            },
+        ],
+    },
+    {
+        path: '/checkout',
+        element: 
+        <Suspense fallback={<div>Loading...</div>}>
+            <Checkout />
+        </Suspense>
+        
     }
 ])
 

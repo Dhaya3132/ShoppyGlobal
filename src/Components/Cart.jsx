@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import CartItem from './CartItem';
 import { removeCart } from '../utils/cartSlice';
 
@@ -31,7 +32,7 @@ const Cart = () => {
               <li className='font-bast text-medium'>Tax : $ 3</li>
               <li className='font-bast text-medium'>Total Amount : ${total + 3} </li>
             </ul>
-            <button className='w-full bg-Blue text-white font-normal py-2 px-4 mt-4'>Checkout</button>
+            <Link to='/checkout'><button className='w-full bg-Blue text-white font-normal py-2 px-4 mt-4'>Checkout</button></Link>
           </div>
         </div> : <p className='font-normal text-lg text-black text-center mt-5'>Your cart is empty</p>}
     </>
