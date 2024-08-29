@@ -22,7 +22,7 @@ const Checkout = () => {
   return (
     <div>
       <header className='p-5 border-b-2 border-gray-100'>
-        <h2 className='font-normal text-lg font-Sacramento'>Shoppy Global</h2>
+        <h2 className='font-normal text-lg font-Poppins'>Shoppy Global</h2>
       </header>
 
       {!confirmOrder ? <section className='bg-gray-100 p-3 h-full w-full'>
@@ -37,7 +37,7 @@ const Checkout = () => {
         :
         <div className='flex flex-col justify-center items-center'>
           <PopUp title={true} />
-          <Link to='/products'><button className='bg-Blue text-white font-medium px-6 py-3 mt-5'>Back to shopping</button></Link>
+          <Link to='/products'><button className='bg-blue-500 text-white font-medium px-6 py-3 mt-5'>Back to shopping</button></Link>
         </div>
       }
     </div>

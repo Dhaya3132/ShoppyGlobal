@@ -32,7 +32,7 @@ const Cart = () => {
               <li className='font-bast text-medium'>Tax : $ 3</li>
               <li className='font-bast text-medium'>Total Amount : ${total + 3} </li>
             </ul>
-            <Link to='/checkout'><button className='w-full bg-Blue text-white font-normal py-2 px-4 mt-4'>Checkout</button></Link>
+            <Link to='/checkout'><button className='w-full bg-blue-500 text-white font-normal py-2 px-4 mt-4'>Checkout</button></Link>
           </div>
         </div> : <p className='font-normal text-lg text-black text-center mt-5'>Your cart is empty</p>}
     </>

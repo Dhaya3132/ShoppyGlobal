@@ -28,7 +28,7 @@ const OrderSummary = () => {
                 <p className='font-semibold text-base'>Total Products: {cartItem.length}</p>
                 <p className='font-semibold text-base'>Subtotal: ${total}</p>
                 <p className='font-semibold text-base'>Tax: $3</p>
-                <p className="font-medium bg-Blue text-white pl-3 pr-3 py-3 mt-2 rounded-md">Total: $ {total + 3}</p>
+                <p className="font-medium bg-blue-500 text-white pl-3 pr-3 py-3 mt-2 rounded-md">Total: $ {total + 3}</p>
             </div>
         </div>
     )

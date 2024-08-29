@@ -8,29 +8,28 @@ export default {
     extend: {
       colors:{
         'Vermillion':'#E34234',
-        'WhiteSmoke':'#F5F5F5',
-        'mintCream':'#F5FFFA',
-        'Blue':'#265bff'
+        'LightGreen':'#e9f5db',
       },
       fontFamily:{
         'Poppins':['Poppins'],
         'Sacramento':['Sacramento']
       },
       backgroundImage:{
-        'bgBanner':"url('/public/bg_banner.svg')",
+        'bgBanner':"url('/public/hero_Banner.svg')",
       },
       keyframes: {
         'move': {
           '0%': {
-            transform: 'translateX(100%)',
+            transform: 'translateX(100vw)',
           },
           '100%': {
-            transform: 'translateX(-100%)',
+            transform: 'translateX(-100vw)',
           },
         },
       },
       animation: {
-        'Move': 'move 20s linear infinite',
+        'Move': 'move 10s linear infinite',
+        'Move-md': 'move 30s linear infinite',
       },
     },
   },
