@@ -11,7 +11,7 @@ const Cart = () => {
 
   useEffect(() => {
     setTotal(cartItem.reduce((acc, cum) => acc + parseInt(cum.price)*cum.quantity, 0))
-  }, [])
+  }, [cartItem])
   // console.log(cartItem)
   const removeProduct = (id) => {
     disptach(removeCart(id))

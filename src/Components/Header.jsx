@@ -28,10 +28,18 @@ const Header = () => {
 
       {isOpen && <div className='bg-Vermillion md:hidden'>
         <ul className='flex flex-col gap-6 justify-end items-end font-normal text-base p-5 text-white'>
-          <Link><li>Home</li></Link>
-          <Link to="/products"><li className='flex items-center gap-1'>Products <img src={product_icon} alt="producticon" className='w-5 h-5' /></li></Link>
-          <Link to='/cartproduct'><li className='flex items-center gap-1'>Cart<img src={cart_icon} alt="cart_icnon" className='w-5 h-5' /></li></Link>
-          <li><img src={profile_icon} alt="profile_icon" className='w-8 h-8 ml-4' /></li>
+          <Link>
+            <li>Home</li>
+          </Link>
+          <Link to="/products">
+            <li className='flex items-center gap-1'>Products <img src={product_icon} alt="producticon" className='w-5 h-5' /></li>
+          </Link>
+          <Link to='/cartproduct'>
+            <li className='relative flex items-center gap-1'>Cart<img src={cart_icon} alt="cart_icnon" className='w-5 h-5' /></li>
+          </Link>
+          <li>
+            <img src={profile_icon} alt="profile_icon" className='w-8 h-8 ml-4' />
+          </li>
         </ul>
       </div>}
     </nav>

@@ -4,6 +4,7 @@ import { updateQuantity } from '../utils/cartSlice';
 
 const CartItem = ({ product, removeItem }) => {
   const dispatch = useDispatch();
+  
   const handleRemove = () => {
     removeItem(product.id);
   }
