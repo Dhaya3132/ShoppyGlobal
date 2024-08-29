@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from 'react';
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 const OrderSummary = () => {
     const [total, setTotal] = useState();
@@ -29,7 +30,9 @@ const OrderSummary = () => {
                 <p className='font-semibold text-base'>Subtotal: ${total}</p>
                 <p className='font-semibold text-base'>Tax: $3</p>
                 <p className="font-medium bg-blue-500 text-white pl-3 pr-3 py-3 mt-2 rounded-md">Total: $ {total + 3}</p>
+                <Link to='/products'><button className='bg-black text-white py-2 w-full md:px-5 md:py-2 mt-3 rounded-md'>Cancel</button></Link>
             </div>
+            
         </div>
     )
 }
