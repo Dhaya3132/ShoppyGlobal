@@ -26,8 +26,8 @@ const Header = () => {
         </div>
       </div>
 
-      {isOpen && <div className='bg-Vermillion md:hidden'>
-        <ul className='flex flex-col gap-6 justify-end items-end font-normal text-base p-5 text-white'>
+      {isOpen && <div className='bg-LightGreen md:hidden'>
+        <ul className='flex flex-col gap-6 justify-end items-end font-normal text-base p-5 text-black'>
           <Link>
             <li>Home</li>
           </Link>
