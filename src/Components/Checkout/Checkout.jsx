@@ -28,7 +28,7 @@ const Checkout = () => {
       <header className='p-5 border-b-2 border-gray-100'>
         <h2 className='font-normal text-lg font-Poppins'>Shoppy Global</h2>
       </header>
-
+      {/* conditional rendering for shpping form and payment and continue to order place after placing order shows the list of the item we have added */}
       {!confirmOrder ?
         <section className='bg-gray-100 p-3 h-full w-full'>
           <div className='flex md:flex-row gap-5 flex-col'>
@@ -38,7 +38,7 @@ const Checkout = () => {
               {currentForm === 'payment' && <Payment onClick={handleConfirmOrder} />}
             </div>
           </div>
-          
+
         </section>
         :
         <div className='flex flex-col justify-center items-center'>

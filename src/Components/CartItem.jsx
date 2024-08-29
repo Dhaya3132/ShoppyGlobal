@@ -18,6 +18,7 @@ const CartItem = ({ product, removeItem }) => {
   }
 
   return (
+    // inidividual cart item product
     <div id='leftPart' className='bg-white border-b-2 border-gray-300 p-5 flex md:flex-row flex-col  gap-4'>
       <div className='md:w-48 md:h-48 w-fit h-fit'>
         <img src={product.images} alt="product_image" className='w-full h-full bg-gray-50 rounded-lg p-1 border-2 border-slate-100' />
@@ -28,7 +29,8 @@ const CartItem = ({ product, removeItem }) => {
         <div className='mt-2 flex gap-4 items-center'>
           <p className='text-lg font-base'>Quantity</p>
           <div className='flex gap-2 items-center mt-2'>
-            <button className='bg-black px-3 py-1 text-white' onClick={increaseQunatity}>+</button>
+            {/* btn for increase and decersing product */}
+            <button className='bg-black px-3 py-1 text-white' onClick={increaseQunatity}>+</button>  
             <p>{product.quantity}</p>
             <button className='bg-black  px-3 py-1 p-1 text-white' onClick={decreaseQuantity}>-</button>
           </div>

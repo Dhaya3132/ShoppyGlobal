@@ -7,7 +7,7 @@ import Loading from './Components/Loading';
 
 const Products = lazy(() => import('./Pages/ProductPage/Products'));
 const ProductDetail = lazy(() => import('./Components/ProductDetail'));
-const Cart = lazy(() => import('./Components/Cart'));
+const Cart = lazy(() => import('./Pages/Cart/CartPage'));
 const Checkout = lazy(() => import('./Components/Checkout/Checkout'));
 
 const router = createBrowserRouter([
