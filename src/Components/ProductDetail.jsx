@@ -38,7 +38,7 @@ const ProductDetail = () => {
     }
 
     if(error){
-        return <p>Error</p>
+        return <p className='text-center text-xl font-medium p-4'>{`Error : ${error}`}</p>
     }
 
     return (
