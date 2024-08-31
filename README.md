@@ -60,7 +60,7 @@
 
 ## Clone the repository:
  
-- git clone https://github.com/yourusername/ecommerce-website.git
+- git clone https://github.com/Dhaya3132/ShoppyGlobal
 
 ## Navigate to the project directory:
 
