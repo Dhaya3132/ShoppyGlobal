@@ -21,7 +21,7 @@ const CartItem = ({ product, removeItem }) => {
     // inidividual cart item product
     <div id='leftPart' className='bg-white border-b-2 border-gray-300 p-5 flex md:flex-row flex-col  gap-4'>
       <div className='md:w-48 md:h-48 w-fit h-fit'>
-        <img src={product.images} alt="product_image" className='w-full h-full bg-gray-50 rounded-lg p-1 border-2 border-slate-100' />
+        <img src={`http://localhost:5000/image/${product.image}`} alt="product_image" className='w-full h-full bg-gray-50 rounded-lg p-1 border-2 border-slate-100' />
       </div>
       <div>
         <h2 className='font-medium text-xl'>{product.title}</h2>

@@ -3,8 +3,9 @@ import ProductItem from '../ProductItem';
 import Loading from '../Loading';
 
 const NewArrival = () => {
-    const { productData,loading } = useFetch('https://dummyjson.com/products');
-    const products = productData && productData.products ? productData.products : [];
+    const { productData,loading } = useFetch('http://localhost:5000/api/product/listProducts');
+    console.log(productData)
+    const products = Array.isArray(productData) ? productData : [];
     const filterProduct = products.length >= 5 ? products.slice(0, 5) : products;
 
     return (
@@ -16,7 +17,7 @@ const NewArrival = () => {
                 </div>
                 <h2 className='font-semibold text-xl text-black mb-2'>Move forward with new trend</h2>
                 {loading ? <Loading />  :<div className='flex flex-wrap md:gap-4 gap-2 mt-3 items-center'>
-                    {filterProduct.map((product) => (<ProductItem product={product} key={product.id} />))}
+                    {filterProduct.map((product) => (<ProductItem product={product} key={product._id} />))}
                 </div>}
             </div>
 

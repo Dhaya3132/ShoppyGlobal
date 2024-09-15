@@ -23,7 +23,7 @@ const Cart = () => {
         <div className='bg-white w-full p-5 flex md:flex-row flex-col justify-center gap-4'>
           {/* display the cart item products */}
           <div className='md:w-1/2 w-full flex flex-col gap-2'>
-            { cartItem.length > 0 && cartItem.map((product) => ( <CartItem product={product} removeItem={removeProduct}key={product.id} /> )) }
+            { cartItem.length > 0 && cartItem.map((product) => ( <CartItem product={product} removeItem={removeProduct} key={product._id} /> )) }
           </div>
           {/* display the product order summary total */}
           <div id='rightPart' className='bg-gray-100 p-5 md:w-96 w-full h-fit'>

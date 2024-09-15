@@ -8,9 +8,11 @@ export const useFetch = (url, isList = true) => {
         const fetchProducts = async() => {
             try{
                 const response = await fetch(url);
+                // console.log(response)
                 const responseData = await response.json();
                 // console.log(responseData)
-                setProductData(responseData);
+                // console.log(responseData.data)
+                setProductData(responseData.data);
             }
             catch(error){
                 setError(error.message)
