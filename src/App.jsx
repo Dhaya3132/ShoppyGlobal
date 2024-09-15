@@ -6,8 +6,8 @@ function App() {
   const [login, setLogin] = useState(true);
   return (
     <>
-      { login ? <LoginPopUp /> : <></> }
-      <Header />
+      { login ? <LoginPopUp setLogin={setLogin} /> : <></> }
+      <Header setLogin={setLogin} />
       <Outlet />
     </>
   )

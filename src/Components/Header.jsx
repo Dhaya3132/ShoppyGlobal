@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { HiOutlineMenu } from "react-icons/hi";
 import { useState } from 'react';
 
-const Header = () => {
+const Header = ({setLogin}) => {
   const [isOpen, setIsOpen] = useState(false)
   const handleMenu = () => {
     setIsOpen(!isOpen);
@@ -20,7 +20,7 @@ const Header = () => {
           <Link to="/products"><li className='flex items-center gap-1'>Products <img src={product_icon} alt="producticon" className='w-5 h-5' /></li></Link>
           <Link to='/cartproduct'><li className='flex items-center gap-1'>Cart<img src={cart_icon} alt="cart_icnon" className='w-5 h-5' /></li></Link>
           <li>
-            <button className='bg-black px-5 py-2 text-white font-normal text-sm rounded-md'>Sign/Login</button>
+            <button className='bg-black px-5 py-2 text-white font-normal text-sm rounded-md' onClick={() => setLogin(true)}>Sign/Login</button>
           </li>
         </ul>
         <div className='md:hidden'>
