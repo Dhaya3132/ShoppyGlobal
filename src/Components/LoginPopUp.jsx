@@ -1,11 +1,9 @@
 import React from 'react';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import axios from "axios"
+import axios from "axios";
 
 const LoginPopUp = ({ setLogin }) => {
     const [currentState, setCurrentState] = useState('Sign In');
-    const navigate = useNavigate()
     const [data, setData] = useState({
         name: "",
         email: "",
@@ -23,6 +21,7 @@ const LoginPopUp = ({ setLogin }) => {
     let newUrl = 'http://localhost:5000/api/user'
     const handleSubmit = async (e) => {
         e.preventDefault();
+
         // console.log(data);
         if (currentState === 'Sign In') {
             newUrl += '/register';
@@ -34,6 +33,7 @@ const LoginPopUp = ({ setLogin }) => {
         // console.log(response);
         if (response.data.success) {
             setLogin(false)
+            localStorage.setItem('token', response.data.token);
         }
     }
 
